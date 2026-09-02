@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="Fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./assets/hotel.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Hostel</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    @media (max-width: 1023px) {
+      #navlist {
+        display: none;
+      }
+      #navlist.show {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      #navlist {
+        display: flex !important;
+        position: static !important;
+        flex-direction: row !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-top: 0 !important;
+      }
+    }
+  </style>
+
+  <body class="bg-stone-200">
+    <nav
+      class="text-slate-900 flex flex-row justify-between items-center lg:py- shadow-md sticky top-0 z-50 bg-stone-200 p-2 relative"
+    >
+      <h2 class="text-md lg:text-xl font-bold">HB HOSTEL</h2>
+
+      <button id="menubtn" class="text-md font-bold lg:hidden">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul
+        id="navlist"
+        class="lg:flex-row flex-col gap-2 lg:gap-5 absolute top-full right-0 bg-gray-200 rounded-2xl shadow-lg mt-2 items-center p-1 transition-all duration-300"
+      >
+        <li>
+          <a href="#Avantages" class="text-sm font-semibold">Nos Atouts</a>
+        </li>
+        <li>
+          <a href="#Chambres" class="text-sm font-semibold">Les Chambres</a>
+        </li>
+        <li><a href="#contact" class="text-sm font-semibold">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="w-full">
+      <div class="relative">
+        <img
+          src="./assets/hotel.jpg"
+          alt="HB HOSTEL"
+          class="w-full h-auto block brightness-50"
+        />
+        <a
+          href="#Réserv"
+          class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#E5C996] via-[#DFC290] to-[#D4A359] text-xs md:text-lg inline-block font-bold px-2 lg:px-5 py-1 lg:py-2.5 text-slate-900 rounded-full hover:brightness-110 shadow-lg shadow-[#DFC290]/40 border border-[#F3E2C3] transition-all cursor-pointer whitespace-nowrap"
+          >Réserver maintenant <i class="fa-brands fa-whatsapp mr-1"></i>
+        </a>
+      </div>
+    </div>
+
+    <h1
+      class="font-bold text-lg md:text-7xl text-center text-stone-300 pt-10 md:pt-14 pb-10 md:pb-14"
+    >
+      HB HOSTEL HB HOSTEL HB HOSTEL
+    </h1>
+
+    <div
+      id="Avantages"
+      class="grid grid-cols-1 md:grid-cols-2 p-6 md:p-12 items-center gap-8 md:gap-12 text-white"
+    >
+      <div class="space-y-4 text-center md:text-left">
+        <p
+          class="text-xs md:text-sm font-semibold tracking-widest text-[#C8A878] uppercase"
+        >
+          Votre séjour inoubliable commence ici
+        </p>
+        <p class="text-xs md:text-base leading-relaxed text-slate-900">
+          Situé dans un cadre privilégié, HB HOSTEL vous invite à vivre une
+          expérience d'hébergement unique. Que vous soyez de passage pour
+          affaires ou en vacances, nos espaces soigneusement aménagés allient
+          design contemporain et atmosphère intime pour vous garantir un repos
+          absolu. Profitez d’un service attentif et d’une ambiance où chaque
+          détail est pensé pour votre bien-être.
+        </p>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="relative w-full max-w-sm">
+          <img
+            src="./assets/main.png"
+            alt="HB HOSTEL"
+            class="h-[220px] md:h-[280px] w-full object-cover rounded-2xl border-2 border-[#DFC290] shadow-xl shadow-[#DFC290]/20"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="Chambres" class="text-center p-10">
+      <div>
+        <h3 class="text-md lg:text-xl font-bold text-slate-900 p-6">
+          Les chambers
+        </h3>
+        <p class="text-[#C8A878] text-xs lg:text-md">
+          Un espace intime et lumineux, conçu pour votre repos
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 p-4 gap-5">
+        <div class="flex flex-col bg-sky-150 shadow-xl rounded-3xl">
+          <div>
+            <img
+              src="./assets/room.png"
+              alt="city"
+              class="h-48 w-full object-cover rounded-t-3xl"
+            />
+          </div>
+          <div class="p-4">
+            <div>
+              <h2 class="font-bold text-slate-700 text-md">Chambre Twin</h2>
+              <br />
+              <p class="text-slate-600">
+                5000 DA <span class="text-[#C8A878] text-sm">/ 1 nuit</span>
+              </p>
+            </div>
+            <br />
+          </div>
+        </div>
+
+        <div class="flex flex-col bg-sky-150 shadow-xl rounded-3xl">
+          <div>
+            <img
+              src="./assets/one.jfif"
+              alt="city"
+              class="h-48 w-full object-cover rounded-t-3xl"
+            />
+          </div>
+          <div class="p-4">
+            <div>
+              <h2 class="font-bold text-slate-700 text-md">Chambre Double</h2>
+              <br />
+              <p class="text-slate-600">
+                7000 DA <span class="text-[#C8A878] text-sm">/ 1 nuit</span>
+              </p>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="Réserv"
+      class="rounded-2xl border-2 border-[#DFC290] shadow-xl shadow-[#DFC290]/20 p-5 m-4 bg-transparent"
+    >
+      <div class="p-5 lg:p-10 text-center">
+        <h1 class="text-sm lg:text-lg font-bold text-slate-700">Réservation</h1>
+      </div>
+      <form id="form" class="flex flex-col space-y-3 lg:space-y-8">
+        <div class="relative w-full pb-3">
+          <input
+            id="name"
+            type="text"
+            required
+            placeholder=" "
+            class="peer w-full px-3 pt-4 pb-1 text-xs text-slate-600 bg-transparent border border-slate-400 rounded-xl outline-none transition-all duration-300 focus:border-[#DFC290] focus:shadow-[0_0_15px_rgba(223,194,144,0.6)]"
+          />
+          <label
+            class="absolute text-xs text-slate-400 left-3 top-3.5 pointer-events-none transition-all duration-200 origin-left peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#DFC290] peer-not-placeholder-shown:-translate-y-2.5 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:text-[#DFC290] peer-valid:-translate-y-2.5 peer-valid:scale-75 peer-valid:text-[#DFC290]"
+          >
+            Nom & Prénom
+          </label>
+          <span
+            id="name-error"
+            class="absolute left-3 bottom-0 text-[10px] text-red-500 hidden"
+          >
+            Veuillez saisir votre nom
+          </span>
+        </div>
+
+        <div class="relative w-full pb-3">
+          <input
+            id="phone"
+            type="tel"
+            required
+            placeholder=" "
+            class="peer w-full px-3 pt-4 pb-1 text-xs text-slate-600 bg-transparent border border-slate-400 rounded-xl outline-none transition-all duration-300 focus:border-[#DFC290] focus:shadow-[0_0_15px_rgba(223,194,144,0.6)]"
+          />
+          <label
+            class="absolute text-xs text-slate-400 left-3 top-3.5 pointer-events-none transition-all duration-200 origin-left peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#DFC290] peer-not-placeholder-shown:-translate-y-2.5 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:text-[#DFC290] peer-valid:-translate-y-2.5 peer-valid:scale-75 peer-valid:text-[#DFC290]"
+          >
+            N° de Téléphone
+          </label>
+          <span
+            id="phone-error"
+            class="absolute left-3 bottom-0 text-[10px] text-red-500 hidden"
+          >
+            Le numéro doit comporter 10 chiffres
+          </span>
+        </div>
+
+        <div class="relative w-full mb-4 pb-3">
+          <input
+            type="date"
+            id="date"
+            required
+            class="peer pt-6 pb-1 px-3 text-xs w-full bg-transparent border border-slate-400 rounded-xl text-slate-600 outline-none transition-all duration-300 focus:border-[#DFC290] focus:shadow-[0_0_15px_rgba(223,194,144,0.6)] [&::-webkit-calendar-picker-indicator]:opacity-50 hover:[&::-webkit-calendar-picker-indicator]:opacity-100 [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:invert"
+          />
+          <label
+            class="absolute text-xs text-slate-500 left-3 top-3.5 pointer-events-none transition-all duration-200 origin-left peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#DFC290] peer-valid:-translate-y-2.5 peer-valid:scale-75 peer-valid:text-[#DFC290]"
+          >
+            Date de réservation
+          </label>
+          <span
+            id="date-error"
+            class="absolute left-3 bottom-0 text-[10px] text-red-500 hidden"
+          >
+            Veuillez choisir une date
+          </span>
+        </div>
+
+        <div>
+          <button
+            id="formbtn"
+            class="bg-gradient-to-r from-[#E5C996] via-[#DFC290] to-[#D4A359] text-xs md:text-lg w-full inline-block font-bold px-2 lg:px-5 py-1 lg:py-2.5 text-slate-900 rounded-full hover:brightness-110 shadow-lg shadow-[#DFC290]/40 border border-[#F3E2C3] transition-all cursor-pointer whitespace-nowrap text-center"
+          >
+            Envoyer
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <script src="./code.js"></script>
+</html>
