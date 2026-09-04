@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <title>Hostel</title>
+    <title>Hotel</title>
   </head>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
@@ -17,6 +17,7 @@
     body {
       font-family: "Plus Jakarta Sans", sans-serif;
     }
+
 
     @media (max-width: 1023px) {
       #navlist {
@@ -38,9 +39,10 @@
         margin-top: 0 !important;
       }
     }
+
   </style>
 
-  <body class="bg-stone-200">
+  <body class="bg-stone-200 m-0 p-0">
     <nav
       class="text-slate-900 flex flex-row justify-between items-center lg:py- shadow-md sticky top-0 z-50 bg-stone-200 p-2 relative"
     >
@@ -52,37 +54,74 @@
 
       <ul
         id="navlist"
-        class="lg:flex-row flex-col gap-2 lg:gap-5 absolute top-full right-0 bg-gray-200 rounded-2xl shadow-lg mt-2 items-center p-1 transition-all duration-300"
+        class="lg:flex-row flex-col gap-2 lg:gap-5 absolute top-full right-0 bg-stone-200 rounded-2xl shadow-lg mt-2 items-center p-1 transition-all duration-300"
       >
         <li>
-          <a href="#Avantages" class="text-sm font-semibold">Nos Atouts</a>
+          <a
+            href="#Avantages"
+            class="text-sm font-semibold hover:text-[#C8A878] hover:underline underline-offset-4 decoration-2"
+            >Nos Atouts</a
+          >
         </li>
         <li>
-          <a href="#Chambres" class="text-sm font-semibold">Les Chambres</a>
+          <a
+            href="#Chambres"
+            class="text-sm font-semibold hover:text-[#C8A878] hover:underline underline-offset-4 decoration-2"
+            >Les Chambres</a
+          >
         </li>
-        <li><a href="#contact" class="text-sm font-semibold">Contact</a></li>
+        <li>
+          <a
+            href="#localisation"
+            class="text-sm font-semibold hover:text-[#C8A878] hover:underline underline-offset-4 decoration-2"
+            >Notre Localisation</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="text-sm font-semibold hover:text-[#C8A878] hover:underline underline-offset-4 decoration-2"
+            >Contact</a
+          >
+        </li>
       </ul>
     </nav>
 
     <div class="w-full">
-      <div class="relative">
-        <img
-          src="./assets/hotel.jpg"
-          alt="HB HOSTEL"
-          class="w-full h-auto block brightness-50"
-        />
-        <a
-          href="#Réserv"
-          class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#E5C996] via-[#DFC290] to-[#D4A359] text-xs md:text-lg inline-block font-bold px-2 lg:px-5 py-1 lg:py-2.5 text-slate-900 rounded-full hover:brightness-110 shadow-lg shadow-[#DFC290]/40 border border-[#F3E2C3] transition-all cursor-pointer whitespace-nowrap"
-          >Réserver maintenant <i class="fa-brands fa-whatsapp mr-1"></i>
-        </a>
+  <div class="relative overflow-hidden h-[400px] lg:h-[600px]">
+    <div id="slider" class="relative w-full h-full">
+      <div class="slide absolute inset-0 translate-x-0 transition-transform duration-700 ease-in-out">
+        <img src="./assets/main1.png" alt="Hotel" class="w-full h-full object-cover brightness-50" />
+      </div>
+
+      <div class="slide absolute inset-0 translate-x-full transition-transform duration-700 ease-in-out">
+        <img src="./assets/main2.jpg" alt="Hotel" class="w-full h-full object-cover brightness-50" />
       </div>
     </div>
 
-    <h1
-      class="font-bold text-lg md:text-7xl text-center text-stone-300 pt-10 md:pt-14 pb-10 md:pb-14"
+    <button
+      type="button"
+      id="openModalBtn"
+      onclick="openBookingModal()"
+      class="absolute z-30 bottom-8 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#E5C996] via-[#DFC290] to-[#D4A359] text-xs md:text-lg font-bold px-6 lg:px-8 py-2.5 lg:py-3 text-slate-900 rounded-full hover:brightness-110 shadow-xl shadow-[#DFC290]/40 border border-[#F3E2C3] transition-all cursor-pointer whitespace-nowrap"
     >
-      HB HOSTEL HB HOSTEL HB HOSTEL
+      Réserver maintenant
+      <i class="fa-brands fa-whatsapp ml-1"></i>
+  </button>
+
+    <button id="prevBtn" class="absolute z-20 left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center transition">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <button id="nextBtn" class="absolute z-20 right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center transition">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+</div>
+
+    <h1
+      class="font-bold text-lg md:text-7xl text-center text-stone-300 pt-10 md:pt-14 pb-8 md:pb-14"
+    >HOTEL HOTEL HOTEL HOTEL HOTEL
     </h1>
 
     <div
@@ -108,7 +147,7 @@
       <div class="flex justify-center">
         <div class="relative w-full max-w-sm">
           <img
-            src="./assets/main.png"
+            src="./assets/main.jpg"
             alt="HB HOSTEL"
             class="h-[220px] md:h-[280px] w-full object-cover rounded-2xl border-2 border-[#DFC290] shadow-xl shadow-[#DFC290]/20"
           />
@@ -126,129 +165,348 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 p-4 gap-5">
-        <div class="flex flex-col bg-sky-150 shadow-xl rounded-3xl">
+      <div class="flex md:flex-wrap overflow-x-auto md:overflow-x-visible snap-x md:snap-none snap-mandatory scroll-smooth gap-5 px-4 py-4 justify-start md:justify-center [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        
+        <div class="flex flex-col bg-sky-150 shadow-xl rounded-3xl shrink-0 w-[85%] sm:w-[320px] md:w-80 snap-center">
           <div>
             <img
-              src="./assets/room.png"
+              src="./assets/Chambre simple.jpg"
               alt="city"
               class="h-48 w-full object-cover rounded-t-3xl"
             />
           </div>
           <div class="p-4">
             <div>
-              <h2 class="font-bold text-slate-700 text-md">Chambre Twin</h2>
+              <h2 class="font-bold text-slate-700 text-md">Chambre simple</h2>
+              <p class="text-sm text-slate-600">
+                6000 DA <span class="text-[#C8A878] text-xs">/ 1 nuit</span>
+              </p>
               <br />
-              <p class="text-slate-600">
-                5000 DA <span class="text-[#C8A878] text-sm">/ 1 nuit</span>
+              <p class="text-xs text-center text-[#C8A878]">
+                <i class="fa-solid fa-car-side p-1"></i>
+                <i class="fa-regular fa-snowflake p-1"></i>
+                <i class="fa-solid fa-droplet p-1"></i>
+                <i class="fa-solid fa-mug-hot p-1"></i>
+                <i class="fa-solid fa-bell p-1"></i>
               </p>
             </div>
-            <br />
           </div>
         </div>
 
-        <div class="flex flex-col bg-sky-150 shadow-xl rounded-3xl">
+        <div class="flex flex-col shadow-xl rounded-3xl shrink-0 w-[85%] sm:w-[320px] md:w-80 snap-center">
           <div>
             <img
-              src="./assets/one.jfif"
+              src="./assets/Chambre double.jpg"
               alt="city"
               class="h-48 w-full object-cover rounded-t-3xl"
             />
           </div>
           <div class="p-4">
             <div>
-              <h2 class="font-bold text-slate-700 text-md">Chambre Double</h2>
+              <h2 class="font-bold text-slate-700 text-md">Chambre double</h2>
+              <p class="text-sm text-slate-600">
+                9000 DA <span class="text-[#C8A878] text-xs">/ 1 nuit</span>
+              </p>
               <br />
-              <p class="text-slate-600">
-                7000 DA <span class="text-[#C8A878] text-sm">/ 1 nuit</span>
+              <p class="text-xs text-center text-[#C8A878]">
+                <i class="fa-solid fa-car-side p-1"></i>
+                <i class="fa-regular fa-snowflake p-1"></i>
+                <i class="fa-solid fa-droplet p-1"></i>
+                <i class="fa-solid fa-mug-hot p-1"></i>
+                <i class="fa-solid fa-bell p-1"></i>
               </p>
             </div>
-            <br />
           </div>
         </div>
-      </div>
+
+        <div class="flex flex-col bg-sky-150 shadow-xl rounded-3xl shrink-0 w-[85%] sm:w-[320px] md:w-80 snap-center">
+          <div>
+            <img
+              src="./assets/Chambre twin.jpg"
+              alt="city"
+              class="h-48 w-full object-cover rounded-t-3xl"
+            />
+          </div>
+          <div class="p-4">
+            <div>
+              <h2 class="font-bold text-slate-700 text-md">Chambre twin</h2>
+              <p class="text-sm text-slate-600">
+                11000 DA <span class="text-[#C8A878] text-xs">/ 1 nuit</span>
+              </p>
+              <br />
+              <p class="text-xs text-center text-[#C8A878]">
+                <i class="fa-solid fa-car-side p-1"></i>
+                <i class="fa-regular fa-snowflake p-1"></i>
+                <i class="fa-solid fa-droplet p-1"></i>
+                <i class="fa-solid fa-mug-hot p-1"></i>
+                <i class="fa-solid fa-bell p-1"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col bg-sky-150 shadow-xl rounded-3xl shrink-0 w-[85%] sm:w-[320px] md:w-80 snap-center">
+          <div>
+            <img
+              src="./assets/Chambre triple.jpg"
+              alt="city"
+              class="h-48 w-full object-cover rounded-t-3xl"
+            />
+          </div>
+          <div class="p-4">
+            <div>
+              <h2 class="font-bold text-slate-700 text-md">Chambre triple</h2>
+              <p class="text-sm text-slate-600">
+                15000 DA <span class="text-[#C8A878] text-xs">/ 1 nuit</span>
+              </p>
+              <br />
+              <p class="text-xs text-center text-[#C8A878]">
+                <i class="fa-solid fa-car-side p-1"></i>
+                <i class="fa-regular fa-snowflake p-1"></i>
+                <i class="fa-solid fa-droplet p-1"></i>
+                <i class="fa-solid fa-mug-hot p-1"></i>
+                <i class="fa-solid fa-bell p-1"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col bg-sky-150 shadow-xl rounded-3xl shrink-0 w-[85%] sm:w-[320px] md:w-80 snap-center">
+          <div>
+            <img
+              src="./assets/Chambre familiale.jpg"
+              alt="city"
+              class="h-48 w-full object-cover rounded-t-3xl"
+            />
+          </div>
+          <div class="p-4">
+            <div>
+              <h2 class="font-bold text-slate-700 text-md">Chambre familiale</h2>
+              <p class="text-sm text-slate-600">
+                18000 DA <span class="text-[#C8A878] text-xs">/ 1 nuit</span>
+              </p>
+              <br />
+              <p class="text-xs text-center text-[#C8A878]">
+                <i class="fa-solid fa-car-side p-1"></i>
+                <i class="fa-regular fa-snowflake p-1"></i>
+                <i class="fa-solid fa-droplet p-1"></i>
+                <i class="fa-solid fa-mug-hot p-1"></i>
+                <i class="fa-solid fa-bell p-1"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col bg-sky-150 shadow-xl rounded-3xl shrink-0 w-[85%] sm:w-[320px] md:w-80 snap-center">
+          <div>
+            <img
+              src="./assets/suite.jpg"
+              alt="city"
+              class="h-48 w-full object-cover rounded-t-3xl"
+            />
+          </div>
+          <div class="p-4">
+            <div>
+              <h2 class="font-bold text-slate-700 text-md">Suite</h2>
+              <p class="text-sm text-slate-600">
+                22000 DA <span class="text-[#C8A878] text-xs">/ 1 nuit</span>
+              </p>
+              <br />
+              <p class="text-xs text-center text-[#C8A878]">
+                <i class="fa-solid fa-car-side p-1"></i>
+                <i class="fa-regular fa-snowflake p-1"></i>
+                <i class="fa-solid fa-droplet p-1"></i>
+                <i class="fa-solid fa-mug-hot p-1"></i>
+                <i class="fa-solid fa-bell p-1"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col bg-sky-150 shadow-xl rounded-3xl shrink-0 w-[85%] sm:w-[320px] md:w-80 snap-center">
+          <div>
+            <img
+              src="./assets/Chambre Deluxe.jpg"
+              alt="city"
+              class="h-48 w-full object-cover rounded-t-3xl"
+            />
+          </div>
+          <div class="p-4">
+            <div>
+              <h2 class="font-bold text-slate-700 text-md">Chambre Deluxe</h2>
+              <p class="text-sm text-slate-600">
+                25000 DA <span class="text-[#C8A878] text-xs">/ 1 nuit</span>
+              </p>
+              <br />
+              <p class="text-xs text-center text-[#C8A878]">
+                <i class="fa-solid fa-car-side p-1"></i>
+                <i class="fa-regular fa-snowflake p-1"></i>
+                <i class="fa-solid fa-droplet p-1"></i>
+                <i class="fa-solid fa-mug-hot p-1"></i>
+                <i class="fa-solid fa-bell p-1"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+</div>
+
+<!-- services et loction -->
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto my-8 px-1 md:px-4 items-stretch">
+  
+  <div class="w-full  shadow-xl p-6 rounded-3xl border  flex flex-col justify-between border-1 border-stone-300">
+    <h3 class="font-bold text-slate-700 text-center mb-4 text-lg">Équipements et Services</h3>
+    <ul class="space-y-4 text-slate-600 text-sm">
+      <li class="flex items-center gap-3">
+        <i class="fa-solid fa-car-side text-[#C8A878] w-5 text-center text-lg"></i>
+        <span>Parking sécurisé</span>
+      </li>
+      <li class="flex items-center gap-3">
+        <i class="fa-regular fa-snowflake text-[#C8A878] w-5 text-center text-lg"></i>
+        <span>Climatisation</span>
+      </li>
+      <li class="flex items-center gap-3">
+        <i class="fa-solid fa-droplet text-[#C8A878] w-5 text-center text-lg"></i>
+        <span>Eau chaude</span>
+      </li>
+      <li class="flex items-center gap-3">
+        <i class="fa-solid fa-mug-hot text-[#C8A878] w-5 text-center text-lg"></i>
+        <span>Petit-déjeuner / Café</span>
+      </li>
+      <li class="flex items-center gap-3">
+        <i class="fa-solid fa-bell text-[#C8A878] w-5 text-center text-lg"></i>
+        <span>Service 24h/24</span>
+      </li>
+    </ul>
+  </div>
+
+  <div id="localisation" class="w-full border border-1 border-stone-300 shadow-xl p-4 rounded-3xl overflow-hidden flex flex-col">
+    <h3 class="font-bold text-slate-700 text-center mb-4 text-lg">Notre Localisation</h3>
+    <div class="w-full flex-grow rounded-2xl overflow-hidden min-h-[300px]">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204627.70535025842!2d3.3041440509095263!3d36.73917997894671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb26977ea659f%3A0x4231102d38a36f49!2z2KfZhNis2LLYp9im2LE!5e0!3m2!1sar!2sdz!4v1788518079996!5m2!1sar!2sdz" 
+        class="w-full h-full border-0" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+
+</div>
+
+<!-- model de Réservation -->
+<div id="bookingModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm hidden p-4">
+  <div class="relative w-full max-w-md bg-stone-200/90 backdrop-blur-md rounded-3xl border-2 border-[#DFC290] shadow-2xl shadow-[#DFC290]/30 p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+  
+    <button type="button" onclick="closeBookingModal()" class="absolute top-4 left-4 text-slate-500 hover:text-[#DFC290] text-xl font-bold transition-colors">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="text-center mb-6">
+      <h1 class="text-lg lg:text-xl font-bold text-slate-800">Réservation</h1>
+      <p class="text-xs text-slate-600 mt-1">Veuillez remplir les informations ci-dessous</p>
     </div>
 
-    <div
-      id="Réserv"
-      class="rounded-2xl border-2 border-[#DFC290] shadow-xl shadow-[#DFC290]/20 p-5 m-4 bg-transparent"
-    >
-      <div class="p-5 lg:p-10 text-center">
-        <h1 class="text-sm lg:text-lg font-bold text-slate-700">Réservation</h1>
+    <!-- الاستمارة -->
+    <form id="form" class="flex flex-col space-y-4">
+      
+      <div class="relative w-full pb-3">
+        <input
+          id="name"
+          type="text"
+          required
+          placeholder=" "
+          class="peer w-full px-3 pt-4 pb-1 text-xs text-blue-950 font-semibold bg-transparent border border-slate-500 rounded-xl outline-none transition-all duration-300 focus:border-[#DFC290] focus:shadow-[0_0_15px_rgba(223,194,144,0.4)]"
+        />
+        <label class="absolute text-xs text-slate-600 font-medium left-3 top-3.5 pointer-events-none transition-all duration-200 origin-left peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#b89758] peer-not-placeholder-shown:-translate-y-2.5 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:text-[#b89758] peer-valid:-translate-y-2.5 peer-valid:scale-75 peer-valid:text-[#b89758]">
+          Nom & Prénom
+        </label>
+        <span id="name-error" class="absolute left-3 bottom-0 text-[10px] text-red-500 hidden">
+          Veuillez saisir votre nom
+        </span>
       </div>
-      <form id="form" class="flex flex-col space-y-3 lg:space-y-8">
-        <div class="relative w-full pb-3">
-          <input
-            id="name"
-            type="text"
-            required
-            placeholder=" "
-            class="peer w-full px-3 pt-4 pb-1 text-xs text-slate-600 bg-transparent border border-slate-400 rounded-xl outline-none transition-all duration-300 focus:border-[#DFC290] focus:shadow-[0_0_15px_rgba(223,194,144,0.6)]"
-          />
-          <label
-            class="absolute text-xs text-slate-400 left-3 top-3.5 pointer-events-none transition-all duration-200 origin-left peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#DFC290] peer-not-placeholder-shown:-translate-y-2.5 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:text-[#DFC290] peer-valid:-translate-y-2.5 peer-valid:scale-75 peer-valid:text-[#DFC290]"
-          >
-            Nom & Prénom
-          </label>
-          <span
-            id="name-error"
-            class="absolute left-3 bottom-0 text-[10px] text-red-500 hidden"
-          >
-            Veuillez saisir votre nom
-          </span>
-        </div>
 
-        <div class="relative w-full pb-3">
-          <input
-            id="phone"
-            type="tel"
-            required
-            placeholder=" "
-            class="peer w-full px-3 pt-4 pb-1 text-xs text-slate-600 bg-transparent border border-slate-400 rounded-xl outline-none transition-all duration-300 focus:border-[#DFC290] focus:shadow-[0_0_15px_rgba(223,194,144,0.6)]"
-          />
-          <label
-            class="absolute text-xs text-slate-400 left-3 top-3.5 pointer-events-none transition-all duration-200 origin-left peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#DFC290] peer-not-placeholder-shown:-translate-y-2.5 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:text-[#DFC290] peer-valid:-translate-y-2.5 peer-valid:scale-75 peer-valid:text-[#DFC290]"
-          >
-            N° de Téléphone
-          </label>
-          <span
-            id="phone-error"
-            class="absolute left-3 bottom-0 text-[10px] text-red-500 hidden"
-          >
-            Le numéro doit comporter 10 chiffres
-          </span>
-        </div>
+      <div class="relative w-full pb-3">
+        <input
+          id="phone"
+          type="tel"
+          required
+          placeholder=" "
+          class="peer w-full px-3 pt-4 pb-1 text-xs text-blue-950 font-semibold bg-transparent border border-slate-500 rounded-xl outline-none transition-all duration-300 focus:border-[#DFC290] focus:shadow-[0_0_15px_rgba(223,194,144,0.4)]"
+        />
+        <label class="absolute text-xs text-slate-600 font-medium left-3 top-3.5 pointer-events-none transition-all duration-200 origin-left peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#b89758] peer-not-placeholder-shown:-translate-y-2.5 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:text-[#b89758] peer-valid:-translate-y-2.5 peer-valid:scale-75 peer-valid:text-[#b89758]">
+          N° de Téléphone
+        </label>
+        <span id="phone-error" class="absolute left-3 bottom-0 text-[10px] text-red-500 hidden">
+          Le numéro doit comporter 10 chiffres
+        </span>
+      </div>
 
-        <div class="relative w-full mb-4 pb-3">
-          <input
-            type="date"
-            id="date"
-            required
-            class="peer pt-6 pb-1 px-3 text-xs w-full bg-transparent border border-slate-400 rounded-xl text-slate-600 outline-none transition-all duration-300 focus:border-[#DFC290] focus:shadow-[0_0_15px_rgba(223,194,144,0.6)] [&::-webkit-calendar-picker-indicator]:opacity-50 hover:[&::-webkit-calendar-picker-indicator]:opacity-100 [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:invert"
-          />
-          <label
-            class="absolute text-xs text-slate-500 left-3 top-3.5 pointer-events-none transition-all duration-200 origin-left peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#DFC290] peer-valid:-translate-y-2.5 peer-valid:scale-75 peer-valid:text-[#DFC290]"
-          >
-            Date de réservation
-          </label>
-          <span
-            id="date-error"
-            class="absolute left-3 bottom-0 text-[10px] text-red-500 hidden"
-          >
-            Veuillez choisir une date
-          </span>
-        </div>
+      <div class="relative w-full pb-3">
+        <select
+          id="room-type"
+          required
+          class="peer w-full px-3 pt-4 pb-1 text-xs text-blue-950 font-semibold bg-transparent border border-slate-500 rounded-xl outline-none transition-all duration-300 focus:border-[#DFC290] focus:shadow-[0_0_15px_rgba(223,194,144,0.4)] cursor-pointer"
+        >
+          <option value="" disabled selected hidden></option>
+          <option value="simple" class="bg-slate-200 text-blue-950">Chambre simple</option>
+          <option value="double" class="bg-slate-200 text-blue-950">Chambre double</option>
+          <option value="twin" class="bg-slate-200 text-blue-950">Chambre twin</option>
+          <option value="triple" class="bg-slate-200 text-blue-950">Chambre triple</option>
+          <option value="familiale" class="bg-slate-200 text-blue-950">Chambre familiale</option>
+          <option value="suite" class="bg-slate-200 text-blue-950">Suite</option>
+          <option value="deluxe" class="bg-slate-200 text-blue-950">Chambre Deluxe</option>
+        </select>
+        <label class="absolute text-xs text-slate-600 font-medium left-3 top-3.5 pointer-events-none transition-all duration-200 origin-left peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#b89758] peer-valid:-translate-y-2.5 peer-valid:scale-75 peer-valid:text-[#b89758]">
+          Type de chambre
+        </label>
+      </div>
 
-        <div>
-          <button
-            id="formbtn"
-            class="bg-gradient-to-r from-[#E5C996] via-[#DFC290] to-[#D4A359] text-xs md:text-lg w-full inline-block font-bold px-2 lg:px-5 py-1 lg:py-2.5 text-slate-900 rounded-full hover:brightness-110 shadow-lg shadow-[#DFC290]/40 border border-[#F3E2C3] transition-all cursor-pointer whitespace-nowrap text-center"
-          >
-            Envoyer
-          </button>
-        </div>
-      </form>
+      <div class="relative w-full pb-3">
+        <input
+          type="date"
+          id="date"
+          required
+          class="peer pt-5 pb-1 px-3 text-xs w-full bg-transparent border border-slate-500 rounded-xl text-blue-950 font-semibold outline-none transition-all duration-300 focus:border-[#DFC290] focus:shadow-[0_0_15px_rgba(223,194,144,0.4)]"
+        />
+        <label class="absolute text-xs text-slate-600 font-medium left-3 top-3.5 pointer-events-none transition-all duration-200 origin-left peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#b89758] peer-not-placeholder-shown:-translate-y-2.5 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:text-[#b89758] peer-valid:-translate-y-2.5 peer-valid:scale-75 peer-valid:text-[#b89758]">
+          Date de réservation
+        </label>
+        <span id="date-error" class="absolute left-3 bottom-0 text-[10px] text-red-500 hidden">
+          Veuillez choisir une date
+        </span>
+      </div>
+
+      <div class="pt-2 w-full">
+        <button
+          type="submit"
+          id="formbtn"
+          class="bg-gradient-to-r from-[#E5C996] via-[#DFC290] to-[#D4A359] text-xs md:text-sm w-full font-bold px-4 py-3 text-slate-900 rounded-full hover:brightness-110 shadow-lg shadow-[#DFC290]/40 border border-[#F3E2C3] transition-all cursor-pointer text-center block"
+        >
+          Confirmer la réservation
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+    <footer class="w-full  text-slate-900 ">
+  <div class="max-w-7xl mx-auto flex flex-col items-center justify-center gap-4 text-center px-4">
+    
+    <div id="contact" class="flex items-center gap-6">
+      <a href="https://wa.me/213779514431" target="blank" class="text-slate-700 hover:text-[#25D366] transition text-xl"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://instagram.com/devcraft_dz" target="blank" class="text-slate-700 hover:text-[#E1306C] transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://tiktok.com/@devcraftdz" target="blank" class="text-slate-700 hover:text-white transition text-xl"><i class="fa-brands fa-tiktok"></i></a>
     </div>
+
+    <div class="text-xs text-slate-500 border-t border-stone-400 pt-3 w-full max-w-xs">
+      &copy; 2026 Tous droits réservés.
+    </div>
+
+  </div>
+</footer>
   </body>
 
   <script src="./code.js"></script>
